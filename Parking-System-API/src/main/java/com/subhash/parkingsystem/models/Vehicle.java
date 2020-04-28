@@ -10,17 +10,17 @@ package com.subhash.parkingsystem.models;
 public class Vehicle {
 	
 	// Member variables of the class Vehicle 
-	private Long vID;
+	private Long ID;
 	private String number;
 	private VehicleType type;
 	private VehicleInfo info;
 	
 	// Getter and Setter methods  for the member variables
 	public Long getvID() {
-		return vID;
+		return ID;
 	}
-	public void setvID(Long vID) {
-		this.vID = vID;
+	public void setvID(Long ID) {
+		this.ID = ID;
 	}
 	public String getNumber() {
 		return number;

@@ -17,6 +17,9 @@ public class VehicleInfo {
 	private Date inTime;
 	private Date outTime;
 	private Short amount;
+	private Gate entryGate;
+	
+	private Gate exitGate;
 	
 	public Long getId() {
 		return id;
@@ -42,4 +45,40 @@ public class VehicleInfo {
 	public void setAmount(Short amount) {
 		this.amount = amount;
 	}
+	public Gate getEntryGate() {
+		return entryGate;
+	}
+	public void setEntryGate(Gate entryGate) {
+		this.entryGate = entryGate;
+	}
+	public Gate getExitGate() {
+		return exitGate;
+	}
+	public void setExitGate(Gate exitGate) {
+		this.exitGate = exitGate;
+	}
+	
+	public boolean equals(Object obj) {
+		if (obj == null) {
+			return false;
+		}
+		if (!(obj instanceof VehicleInfo)) {
+			return false;
+		}
+		VehicleInfo info = (VehicleInfo) obj;
+		if (this.getInTime().equals(info.getInTime()) && this.getOutTime().equals(info.getOutTime())) {
+			if (this.getEntryGate().equals(info.getEntryGate()) && this.getExitGate().equals(info.getExitGate())) {
+				if (this.getAmount().equals(info.getAmount())) {
+					return true;
+				} else {
+					return false;
+				}
+			} else {
+				return false;
+			}
+		} else {
+			return false;
+		}
+	}
+	
 }
