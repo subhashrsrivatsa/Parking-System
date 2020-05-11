@@ -29,5 +29,4 @@ public interface ParkingSystemService {
 	void saveVehicleExitFlow(Vehicle vehicle, Gate gate, Slot slot, Short amount);
 	
 	Optional<List<VehicleEntry>> getAllVehicleEntries();
-	
 }
